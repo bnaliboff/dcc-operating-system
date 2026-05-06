@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Build artifacts
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Working files
+screenshots/
+
+# Internal source documents (contain employee names — public repo)
+*.pdf
+*.pptx
+*.docx
+.pptx.txt
+.preface.txt
+Visual Assets/
