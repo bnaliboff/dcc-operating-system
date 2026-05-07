@@ -10,7 +10,7 @@ export default function ValuesIndexPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-12">
+      <section className="container-page pt-14 md:pt-24 pb-10 md:pb-12">
         <p className="eyebrow">The Framework</p>
         <h1 className="mt-3 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em] max-w-[20ch]">
           Five values. Ten signature behaviors.
@@ -24,7 +24,7 @@ export default function ValuesIndexPage() {
       </section>
 
       {/* Photo break: NYC skyline */}
-      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+      <div className="relative w-full h-[200px] md:h-[280px] lg:h-[360px] overflow-hidden">
         <img
           src="/images/photo-values-hero.jpg"
           alt="Looking up at NYC skyscrapers against a vivid blue sky"
@@ -37,7 +37,7 @@ export default function ValuesIndexPage() {
       <section className="container-page border-t border-t-[var(--color-rule)] py-16">
         <p className="eyebrow mb-8">Pivotal vs. Peripheral</p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <h2 className="font-display text-[1.75rem] leading-[1.2] tracking-[-0.01em]">
               Pivotal Values
             </h2>
@@ -47,7 +47,7 @@ export default function ValuesIndexPage() {
               executive leadership. Every employee must embody these to remain in good standing.
             </p>
           </div>
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <h2 className="font-display text-[1.75rem] leading-[1.2] tracking-[-0.01em]">
               Peripheral Values
             </h2>

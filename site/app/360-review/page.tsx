@@ -80,7 +80,7 @@ export default function ThreeSixtyReviewPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <p className="eyebrow">360 Review</p>
         <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em] text-balance max-w-[24ch]">
           The pressure valve for the two-manager model.
@@ -98,7 +98,7 @@ export default function ThreeSixtyReviewPage() {
       </section>
 
       {/* Photo break: urban excavation */}
-      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+      <div className="relative w-full h-[200px] md:h-[280px] lg:h-[360px] overflow-hidden">
         <img
           src="/images/photo-excavation-urban.jpg"
           alt="Ground-level excavation in an urban setting"
@@ -124,7 +124,7 @@ export default function ThreeSixtyReviewPage() {
           {steps.map((s) => (
             <li
               key={s.step}
-              className="grid grid-cols-12 gap-x-6 bg-[var(--color-paper)] p-10"
+              className="grid grid-cols-12 gap-x-6 gap-y-3 md:gap-y-0 bg-[var(--color-paper)] p-8 md:p-10"
             >
               <div className="col-span-12 md:col-span-1">
                 <span className="font-display text-[2.5rem] leading-none text-[var(--color-mute)]">
@@ -213,7 +213,7 @@ export default function ThreeSixtyReviewPage() {
         </p>
         <div className="space-y-px bg-[var(--color-rule)]">
           {failureModes.map((fm, i) => (
-            <div key={fm.mode} className="grid grid-cols-12 gap-x-6 bg-[var(--color-paper)] p-8">
+            <div key={fm.mode} className="grid grid-cols-12 gap-x-6 gap-y-2 md:gap-y-0 bg-[var(--color-paper)] p-6 md:p-8">
               <div className="col-span-12 md:col-span-1">
                 <span className="font-mono text-[0.875rem] text-[var(--color-mute)]">
                   {String(i + 1).padStart(2, '0')}

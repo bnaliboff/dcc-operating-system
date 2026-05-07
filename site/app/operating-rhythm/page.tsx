@@ -87,7 +87,7 @@ export default function OperatingRhythmPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <p className="eyebrow">Operating Rhythm</p>
         <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em] text-balance max-w-[22ch]">
           Two managers, three conversations.
@@ -111,7 +111,7 @@ export default function OperatingRhythmPage() {
         </h2>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
           {roles.map((r) => (
-            <div key={r.label} className="bg-[var(--color-paper)] p-10">
+            <div key={r.label} className="bg-[var(--color-paper)] p-6 md:p-10">
               <p className="eyebrow mb-1">{r.who}</p>
               <h3 className="font-display text-[1.5rem] leading-[1.25] tracking-[-0.01em]">
                 {r.label}
@@ -126,7 +126,7 @@ export default function OperatingRhythmPage() {
       </section>
 
       {/* Photo break: concrete pour crew */}
-      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+      <div className="relative w-full h-[200px] md:h-[280px] lg:h-[360px] overflow-hidden">
         <img
           src="/images/photo-concrete-pour.jpg"
           alt="DCC crew pouring and finishing a concrete slab"
@@ -150,7 +150,7 @@ export default function OperatingRhythmPage() {
         </p>
         <div className="space-y-px bg-[var(--color-rule)]">
           {conversations.map((c) => (
-            <div key={c.num} className="grid grid-cols-12 gap-x-6 bg-[var(--color-paper)] p-10">
+            <div key={c.num} className="grid grid-cols-12 gap-x-6 gap-y-4 md:gap-y-0 bg-[var(--color-paper)] p-6 md:p-10">
               <div className="col-span-12 md:col-span-1">
                 <span className="font-display text-[2.5rem] leading-none text-[var(--color-mute)]">
                   {c.num}
@@ -188,7 +188,7 @@ export default function OperatingRhythmPage() {
           performing well.
         </p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <p className="eyebrow mb-1">Responsibility 1</p>
             <h3 className="font-display text-[1.5rem] leading-[1.25] tracking-[-0.01em]">
               Skills Feedback
@@ -203,7 +203,7 @@ export default function OperatingRhythmPage() {
               <li>December is a formal review of annual progress</li>
             </ul>
           </div>
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <p className="eyebrow mb-1">Responsibility 2</p>
             <h3 className="font-display text-[1.5rem] leading-[1.25] tracking-[-0.01em]">
               Team Health Pulse

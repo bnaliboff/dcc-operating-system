@@ -138,7 +138,7 @@ export default function GlossaryPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <p className="eyebrow">Glossary</p>
         <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em]">
           Defined terms.
@@ -158,8 +158,8 @@ export default function GlossaryPage() {
             </p>
             <dl className="space-y-px bg-[var(--color-rule)]">
               {grouped[letter].map((entry) => (
-                <div key={entry.term} className="bg-[var(--color-paper)] py-6 px-0">
-                  <div className="grid grid-cols-12 gap-x-6">
+                <div key={entry.term} className="bg-[var(--color-paper)] py-5 md:py-6 px-0">
+                  <div className="grid grid-cols-12 gap-x-6 gap-y-2 md:gap-y-0">
                     <dt className="col-span-12 md:col-span-4 font-display text-[1.125rem] leading-[1.3] px-0">
                       {entry.href ? (
                         <Link href={entry.href} className="link-underline">

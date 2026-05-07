@@ -99,7 +99,7 @@ export default function OrganizationPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <p className="eyebrow">Organization</p>
         <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em] text-balance max-w-[22ch]">
           Three layers, one company.
@@ -113,7 +113,7 @@ export default function OrganizationPage() {
       </section>
 
       {/* Photo break: rooftop structural steel */}
-      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+      <div className="relative w-full h-[200px] md:h-[280px] lg:h-[360px] overflow-hidden">
         <img
           src="/images/photo-org-hero.jpg"
           alt="Steel structural frame rising on an open rooftop deck"
@@ -161,7 +161,7 @@ export default function OrganizationPage() {
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Anatomy of a pod: co-leaders at the top, with field and office role columns below"
             role="img"
-            className="w-full max-w-[960px]"
+            className="w-[640px] md:w-full md:max-w-[960px]"
             style={{ fontFamily: 'var(--font-inter), sans-serif' }}
           >
             {/* Co-leader combined box */}
@@ -246,7 +246,7 @@ export default function OrganizationPage() {
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Five functional departments and their leaders, with sub-units shown beneath where applicable"
             role="img"
-            className="w-full max-w-[960px]"
+            className="w-[640px] md:w-full md:max-w-[960px]"
             style={{ fontFamily: 'var(--font-inter), sans-serif' }}
           >
             {departments.map((dept, i) => {
@@ -393,7 +393,7 @@ export default function OrganizationPage() {
           and the discipline is keeping each lane in its lane.
         </p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <h2 className="font-display text-[1.75rem] leading-[1.2] tracking-[-0.01em]">
               Functional Leader
             </h2>
@@ -406,7 +406,7 @@ export default function OrganizationPage() {
               <li className="flex gap-3"><span className="text-[var(--color-mute)] font-mono text-[0.875rem] mt-0.5">05</span>Hires into the discipline</li>
             </ul>
           </div>
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <h2 className="font-display text-[1.75rem] leading-[1.2] tracking-[-0.01em]">
               Pod Co-Leaders
             </h2>
@@ -437,7 +437,7 @@ export default function OrganizationPage() {
         </p>
 
         {/* RAPID legend */}
-        <div className="grid grid-cols-5 gap-px bg-[var(--color-rule)] mb-10 max-w-3xl">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-[var(--color-rule)] mb-10 max-w-3xl">
           {[
             { letter: 'R', word: 'Recommend', def: 'Proposes the course of action' },
             { letter: 'A', word: 'Agree', def: 'Must sign off — has veto power' },
