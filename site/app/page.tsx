@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import TimelineItem from '@/components/TimelineItem';
+import ValueCard from '@/components/ValueCard';
+import { values } from '@/lib/values';
 
 const layers = [
   {
@@ -36,6 +38,7 @@ const milestones = [
     date: 'Q2 2026',
     title: 'Invest in Pod 1',
     description: 'Prescott and Schaub push Iovino and Dagata to strengthen relationship.',
+    isCurrent: true,
   },
   {
     date: 'Q3 2026',
@@ -73,7 +76,7 @@ const quickRef = [
   {
     title: 'Failure Modes',
     sub: 'Five ways the system breaks, and how to prevent each.',
-    href: '/operating-rhythm#failure-modes',
+    href: '/360-review#failure-modes',
   },
   {
     title: 'Org Chart',
@@ -102,23 +105,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Editorial transition — synthesized from the preface */}
-      <section className="container-page scroll-fade py-28 md:py-32">
-        <div className="grid grid-cols-12 gap-x-6">
-          <div className="col-span-12 md:col-span-2">
-            <p className="eyebrow text-[var(--color-mute)]">A Living System</p>
-          </div>
-          <div className="col-span-12 md:col-span-9">
-            <p className="font-display text-[clamp(1.375rem,2.4vw,1.75rem)] leading-[1.4] tracking-[-0.005em] text-balance max-w-[58ch]">
-              DCC is not a machine. Machines wear down. Parts are replaced. Outputs are fixed.
-              DCC is a living system — one where the interactions between people produce something
-              that no individual, no matter how talented, could produce alone.
-            </p>
-            <p className="mt-8 text-[1.0625rem] leading-[1.65] text-[var(--color-mute)] max-w-[58ch]">
-              Our organizational design reflects this. We operate in three layers, each serving
-              a different function.
-            </p>
-          </div>
+      {/* Five Values */}
+      <section className="container-page border-t border-t-[var(--color-rule)] py-24">
+        <div className="mb-12 flex items-baseline justify-between">
+          <h2 className="eyebrow">The Five Pivotal Values</h2>
+          <Link href="/values" className="eyebrow link-underline">
+            Full framework →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-5">
+          {values.map((value) => (
+            <div key={value.slug} className="bg-[var(--color-paper)] p-10">
+              <ValueCard value={value} />
+            </div>
+          ))}
         </div>
       </section>
 

@@ -5,44 +5,6 @@ export const metadata = {
   title: 'Values — DCC Operating System',
 };
 
-const podPractices = [
-  {
-    title: 'Phase Completion Celebrations',
-    cadence: 'Per milestone',
-    description:
-      'Mark rough-in, top-out, substantial completion. The foreman signs the last beam. The whole pod hears about it.',
-  },
-  {
-    title: 'Weekly Pod Huddle',
-    cadence: 'Weekly',
-    description:
-      "15 minutes. What's done, what's blocked, who needs help. Field and office in the same meeting — not separate chains.",
-  },
-  {
-    title: 'Pod AAR Process',
-    cadence: 'Monthly',
-    description:
-      "What worked, what didn't, one action item for next month. Review last month's action before discussing new data.",
-  },
-  {
-    title: 'Pod Scorecards',
-    cadence: 'Monthly',
-    description:
-      'Schedule performance, budget health, safety, client satisfaction — displayed at the pod level, not individual. Cohesion, not competition.',
-  },
-  {
-    title: 'Cross-Project Learning Sessions',
-    cadence: 'Monthly',
-    description:
-      'A super from one project teaches the pod something they discovered. A PM shares a client negotiation approach. 30 minutes.',
-  },
-  {
-    title: 'Weekly Recognition Roundtable',
-    cadence: 'Weekly',
-    description:
-      "5 minutes in the pod meeting: anyone can spotlight a colleague's specific contribution using Situation-Behavior-Impact format.",
-  },
-];
 
 export default function ValuesIndexPage() {
   return (
@@ -73,7 +35,6 @@ export default function ValuesIndexPage() {
             <p className="mt-5 text-[1.0625rem] leading-[1.6]">
               Non-negotiable. Company-wide. The same in Carlsbad, New York, and Honolulu. Set by
               executive leadership. Every employee must embody these to remain in good standing.
-              These are what make DCC, DCC.
             </p>
           </div>
           <div className="bg-[var(--color-paper)] p-10">
@@ -87,35 +48,6 @@ export default function ValuesIndexPage() {
               distinctive.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Pod Practices — peripheral values in action */}
-      <section
-        id="pod-practices"
-        className="container-page border-t border-t-[var(--color-rule)] py-16"
-      >
-        <p className="eyebrow mb-2">Peripheral Values in Practice</p>
-        <h2 className="font-display text-[2rem] leading-[1.2] tracking-[-0.01em] mb-3">
-          Pod Practices
-        </h2>
-        <p className="max-w-[58ch] text-[1.0625rem] leading-[1.6] mb-10">
-          Pod Co-Leaders own these. Each pod adapts to its own style — that&apos;s the point.
-          These are concrete examples of peripheral values: the rituals, communication patterns,
-          and learning habits that make each pod distinctive.
-        </p>
-        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
-          {podPractices.map((p) => (
-            <div key={p.title} className="bg-[var(--color-paper)] p-8">
-              <p className="eyebrow mb-3">{p.cadence}</p>
-              <h3 className="font-display text-[1.25rem] leading-[1.3] tracking-[-0.005em]">
-                {p.title}
-              </h3>
-              <p className="mt-3 text-[1.0625rem] leading-[1.6] text-[var(--color-mute)]">
-                {p.description}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 

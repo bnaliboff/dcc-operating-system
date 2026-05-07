@@ -1,5 +1,44 @@
 export const metadata = { title: 'Operating Rhythm — DCC Operating System' };
 
+const podPractices = [
+  {
+    title: 'Phase Completion Celebrations',
+    cadence: 'Per milestone',
+    description:
+      'Mark rough-in, top-out, substantial completion. The foreman signs the last beam. The whole pod hears about it.',
+  },
+  {
+    title: 'Weekly Pod Huddle',
+    cadence: 'Weekly',
+    description:
+      "15 minutes. What's done, what's blocked, who needs help. Field and office in the same meeting — not separate chains.",
+  },
+  {
+    title: 'Pod AAR Process',
+    cadence: 'Monthly',
+    description:
+      "What worked, what didn't, one action item for next month. Review last month's action before discussing new data.",
+  },
+  {
+    title: 'Pod Scorecards',
+    cadence: 'Monthly',
+    description:
+      'Schedule performance, budget health, safety, client satisfaction — displayed at the pod level, not individual. Cohesion, not competition.',
+  },
+  {
+    title: 'Cross-Project Learning Sessions',
+    cadence: 'Monthly',
+    description:
+      'A super from one project teaches the pod something they discovered. A PM shares a client negotiation approach. 30 minutes.',
+  },
+  {
+    title: 'Weekly Recognition Roundtable',
+    cadence: 'Weekly',
+    description:
+      "5 minutes in the pod meeting: anyone can spotlight a colleague's specific contribution using Situation-Behavior-Impact format.",
+  },
+];
+
 const roles = [
   {
     label: 'Pod Co-Leaders',
@@ -9,11 +48,11 @@ const roles = [
       'Run the work. Hit the schedule, the budget, and the quality bar. Build the daily habits and rituals that make the pod feel like a team — field and office, same chain.',
   },
   {
-    label: 'Department Manager',
-    who: 'Functional Head — also called Department Head',
+    label: 'Functional Leader',
+    who: 'Functional Head',
     owns: 'Individual development and pod health',
     detail:
-      'Coach the craft. Run the 1:1s, set the SMART goals, watch the career trajectory. Collectively, the Department Managers also monitor the health of every pod and intervene when a team is struggling.',
+      'Coach the craft. Run the 1:1s, set the SMART goals, watch the career trajectory. Collectively, the Functional Leaders also monitor the health of every pod and intervene when a team is struggling.',
   },
 ];
 
@@ -29,7 +68,7 @@ const conversations = [
   {
     num: '02',
     title: 'Functional 1:1',
-    owner: 'Department Manager',
+    owner: 'Functional Leader',
     cadence: 'Monthly',
     purpose: 'Craft development, professional standards, career trajectory.',
     what: 'How are you growing professionally? Focus on annual SMART Goals. Skills feedback and coaching on upward mobility.',
@@ -40,7 +79,7 @@ const conversations = [
     owner: 'All Three Parties',
     cadence: 'Quarterly',
     purpose: 'Surface tension, align goals, reconcile conflicting direction.',
-    what: 'The pressure valve. The mandatory mechanism that prevents the two-boss problem from festering. Facilitated by the Department Manager.',
+    what: 'The pressure valve. The mandatory mechanism that prevents the two-boss problem from festering. Facilitated by the Functional Leader.',
   },
 ];
 
@@ -56,7 +95,7 @@ export default function OperatingRhythmPage() {
         <div className="mt-6 h-px w-[120px] bg-[var(--color-accent)]" aria-hidden />
         <p className="mt-8 max-w-[58ch] text-[1.0625rem] leading-[1.6] text-pretty">
           The matrix runs on two distinct roles with two distinct lanes. Pod Co-Leaders run the
-          work. Department Managers develop the people. Three regular conversations keep the lanes
+          work. Functional Leaders develop the people. Three regular conversations keep the lanes
           aligned and the team healthy.
         </p>
       </section>
@@ -124,18 +163,18 @@ export default function OperatingRhythmPage() {
         </div>
       </section>
 
-      {/* Inside the Department Manager role */}
+      {/* Inside the Functional Leader role */}
       <section
         id="department-manager"
         className="container-page border-t border-t-[var(--color-rule)] py-16"
       >
-        <p className="eyebrow mb-2">Inside the Department Manager Role</p>
+        <p className="eyebrow mb-2">Inside the Functional Leader Role</p>
         <h2 className="font-display text-[2rem] leading-[1.2] tracking-[-0.01em] mb-8">
           Two monthly responsibilities
         </h2>
         <p className="max-w-[58ch] text-[1.0625rem] leading-[1.6] mb-10">
-          The Department Manager isn't only running individual 1:1s. They also collect pod-level
-          health data — and as a group, the Department Managers use that data to keep every pod
+          The Functional Leader isn't only running individual 1:1s. They also collect pod-level
+          health data — and as a group, the Functional Leaders use that data to keep every pod
           performing well.
         </p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
@@ -146,7 +185,7 @@ export default function OperatingRhythmPage() {
             </h3>
             <p className="mt-1 text-[0.9375rem] text-[var(--color-mute)]">Individual development — 1:1</p>
             <ul className="mt-6 space-y-3 text-[1.0625rem] leading-[1.6]">
-              <li>Department Manager aligns in 1:1 to review SMART Goals from the Annual Review</li>
+              <li>Functional Leader aligns in 1:1 to review SMART Goals from the Annual Review</li>
               <li>January meeting sets the year's objectives</li>
               <li>10 opportunities throughout the year for formal skills feedback</li>
               <li>Active coaching on upward mobility within the organization</li>
@@ -175,6 +214,35 @@ export default function OperatingRhythmPage() {
               ~15–17 questions · ~18 minutes · 75% scaled / 25% open-ended
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Pod Practices */}
+      <section
+        id="pod-practices"
+        className="container-page border-t border-t-[var(--color-rule)] py-16"
+      >
+        <p className="eyebrow mb-2">Pod-Level Cadences</p>
+        <h2 className="font-display text-[2rem] leading-[1.2] tracking-[-0.01em] mb-3">
+          Pod Practices
+        </h2>
+        <p className="max-w-[58ch] text-[1.0625rem] leading-[1.6] mb-10">
+          Pod Co-Leaders own these. Each pod adapts to its own style — that&apos;s the point. Six
+          rituals that build pod culture: the cadences, communication patterns, and learning habits
+          that make each pod distinctive.
+        </p>
+        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
+          {podPractices.map((p) => (
+            <div key={p.title} className="bg-[var(--color-paper)] p-8">
+              <p className="eyebrow mb-3">{p.cadence}</p>
+              <h3 className="font-display text-[1.25rem] leading-[1.3] tracking-[-0.005em]">
+                {p.title}
+              </h3>
+              <p className="mt-3 text-[1.0625rem] leading-[1.6] text-[var(--color-mute)]">
+                {p.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

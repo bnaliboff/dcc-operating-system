@@ -54,7 +54,7 @@ const entries: Entry[] = [
   {
     term: 'Matrix Organization',
     definition:
-      'A structure in which every employee answers to two managers — a Functional Leader and Pod Co-Leaders — by design, not accident.',
+      'A structure in which every employee answers to two managers — a Functional Leader for craft and career, and Pod Co-Leaders for daily execution.',
     href: '/organization',
   },
   {

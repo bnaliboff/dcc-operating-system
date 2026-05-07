@@ -3,27 +3,27 @@ export const metadata = { title: '360 Review — DCC Operating System' };
 const steps = [
   {
     step: '1',
-    title: 'Pod Leaders → Department Manager',
+    title: 'Pod Leaders → Functional Leader',
     detail:
-      'Project execution feedback shared in a brief 1:1. Framed as development, never evaluation. The Pod Leader selects 1–2 focus areas for the next quarter. SPM and FOM complete together; notes shared by Department Manager.',
+      'Project execution feedback shared in a brief 1:1. Framed as development, never evaluation. The Pod Leader selects 1–2 focus areas for the next quarter. SPM and FOM complete together; notes shared by Functional Leader.',
   },
   {
     step: '2',
     title: 'Peer Review Feedback',
     detail:
-      "Full pod input managed by the Department Manager. Aggregated team pulse scores displayed as trends over time. The pod identifies one collective improvement action. Last quarter's action reviewed before new data is discussed.",
+      "Full pod input managed by the Functional Leader. Aggregated team pulse scores displayed as trends over time. The pod identifies one collective improvement action. Last quarter's action reviewed before new data is discussed.",
   },
   {
     step: '3',
     title: 'Quarterly Deep Review',
     detail:
-      'Co-leaders and Department Manager have a formal check-in that forms the full 360 Review for the individual. Meeting is facilitated and maintained by the Department Manager.',
+      'Co-leaders and Functional Leader have a formal check-in that forms the full 360 Review for the individual. Meeting is facilitated and maintained by the Functional Leader.',
   },
 ];
 
 const raters = [
   {
-    group: 'Functional Manager',
+    group: 'Functional Leader',
     weight: '20%',
     focus: 'Skill mastery, standards compliance, professional growth, career readiness',
     who: 'Aramy for PCs · Prescott for FOMs · Smulski for PreCon',
@@ -87,9 +87,9 @@ export default function ThreeSixtyReviewPage() {
         </h1>
         <div className="mt-6 h-px w-[120px] bg-[var(--color-accent)]" aria-hidden />
         <p className="mt-8 max-w-[58ch] text-[1.0625rem] leading-[1.6] text-pretty">
-          Quarterly. Mandatory. Facilitated by the Department Manager. The 360 Review is the
-          mechanism that prevents the two-boss problem from festering — surfacing tension,
-          aligning goals, and reconciling conflicting direction before it calcifies.
+          Quarterly. Mandatory. Facilitated by the Functional Leader. The 360 Review surfaces
+          tension between the two managers, aligns goals, and reconciles conflicting direction
+          before the matrix calcifies.
         </p>
         <p className="mt-4 max-w-[58ch] text-[1.0625rem] leading-[1.6] text-[var(--color-mute)]">
           This page covers the data-collection model, who reviews whom, and the failure modes the
