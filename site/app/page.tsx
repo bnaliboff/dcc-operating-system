@@ -96,10 +96,10 @@ export default function HomePage() {
       {/* Hero band */}
       <section className="hero-texture border-b border-b-[var(--color-rule)]">
         <div className="container-page py-32 md:py-40">
-          <h1 className="font-display text-[clamp(2.75rem,7vw,5rem)] leading-[1.05] tracking-[-0.02em] text-balance max-w-[18ch]">
+          <h1 className="hero-heading font-display text-[clamp(2.75rem,7vw,5rem)] leading-[1.05] tracking-[-0.02em] text-balance max-w-[18ch]">
             Build the forest. Not just the next tree.
           </h1>
-          <p className="mt-8 text-[1.0625rem] text-[var(--color-mute)]">
+          <p className="hero-sub mt-8 text-[1.0625rem] text-[var(--color-mute)]">
             Dickinson Cameron Construction <span aria-hidden>—</span> Managerial Operating System.
           </p>
         </div>
@@ -107,15 +107,15 @@ export default function HomePage() {
 
       {/* Five Values */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">
-        <div className="mb-12 flex items-baseline justify-between">
+        <div className="section-reveal mb-12 flex items-baseline justify-between">
           <h2 className="eyebrow">The Five Pivotal Values</h2>
           <Link href="/values" className="eyebrow link-underline">
             Full framework →
           </Link>
         </div>
-        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-5">
+        <div className="section-reveal grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-5">
           {values.map((value) => (
-            <div key={value.slug} className="bg-[var(--color-paper)] p-10">
+            <div key={value.slug} className="value-cell bg-[var(--color-paper)] p-10">
               <ValueCard value={value} />
             </div>
           ))}
@@ -124,13 +124,13 @@ export default function HomePage() {
 
       {/* Three layers */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">
-        <div className="mb-12 flex items-baseline justify-between">
+        <div className="section-reveal mb-12 flex items-baseline justify-between">
           <h2 className="eyebrow">The Three Layers, Defined</h2>
           <Link href="/organization" className="eyebrow link-underline">
             Full org view
           </Link>
         </div>
-        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
+        <div className="section-reveal grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
           {layers.map((layer) => (
             <div key={layer.label} className="bg-[var(--color-paper)] p-10">
               <p className="eyebrow mb-1 text-[var(--color-accent)]">{layer.sublabel}</p>
@@ -148,13 +148,13 @@ export default function HomePage() {
 
       {/* Rollout timeline */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">
-        <div className="mb-12 flex items-baseline justify-between">
+        <div className="section-reveal mb-12 flex items-baseline justify-between">
           <h2 className="eyebrow">Where You Are in the Rollout</h2>
           <Link href="/roadmap" className="eyebrow link-underline">
             Full roadmap
           </Link>
         </div>
-        <ol className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-5">
+        <ol className="section-reveal grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-5">
           {milestones.map((m) => (
             <TimelineItem
               key={m.title}
@@ -169,8 +169,8 @@ export default function HomePage() {
 
       {/* Quick reference grid */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">
-        <h2 className="eyebrow mb-12">Quick Reference</h2>
-        <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
+        <h2 className="section-reveal eyebrow mb-12">Quick Reference</h2>
+        <div className="section-reveal grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-3">
           {quickRef.map((tile) => (
             <Link
               key={tile.href}

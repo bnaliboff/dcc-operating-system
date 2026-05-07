@@ -174,6 +174,74 @@
   }
 }
 
+/* ─── Section scroll-entrance ─────────────────────────────────────────────────
+   Elements marked .section-reveal fade up as they enter the viewport.
+   CSS-only via animation-timeline; elements stay fully visible in
+   unsupported browsers (Safari < 17, Firefox < 110).
+   NOTE: This is a deliberate, minimal deviation from the creative brief's
+   "no on-scroll reveals" rule — adopted at executive direction.
+   Keep animation-range conservative so reveals feel structural,
+   not decorative.
+──────────────────────────────────────────────────────────────────────────────── */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .section-reveal {
+      animation: section-reveal-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+
+    @keyframes section-reveal-in {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+    }
+
+    /* Stagger siblings — apply to a wrapping element with .stagger-children */
+    .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+    .stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+    .stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+    .stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+    .stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+  }
+}
+
+/* ─── Hero text load animation ───────────────────────────────────────────────
+   Page-load only (not scroll-triggered). The h1 and sub-line fade in
+   with a slight vertical lift and a short stagger. Structural, not decorative.
+──────────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-heading {
+    animation: hero-enter 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 80ms;
+  }
+
+  .hero-sub {
+    animation: hero-enter 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 220ms;
+  }
+
+  @keyframes hero-enter {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+/* ─── Value card cell hover ───────────────────────────────────────────────────
+   The outer cell (not the Link) transitions bg on hover so the full
+   padding area responds — not just the link's text footprint.
+──────────────────────────────────────────────────────────────────────────────── */
+.value-cell {
+  transition: background-color 220ms ease;
+}
+
+.value-cell:hover {
+  background-color: var(--color-paper-2);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
