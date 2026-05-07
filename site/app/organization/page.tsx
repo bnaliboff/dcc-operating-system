@@ -112,6 +112,16 @@ export default function OrganizationPage() {
         </p>
       </section>
 
+      {/* Photo break: rooftop structural steel */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-org-hero.jpg"
+          alt="Steel structural frame rising on an open rooftop deck"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Operations: Pods */}
       <section
         id="pods"

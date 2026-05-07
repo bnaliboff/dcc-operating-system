@@ -125,6 +125,16 @@ export default function OperatingRhythmPage() {
         </div>
       </section>
 
+      {/* Photo break: concrete pour crew */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-concrete-pour.jpg"
+          alt="DCC crew pouring and finishing a concrete slab"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Three conversations */}
       <section
         id="three-conversations"

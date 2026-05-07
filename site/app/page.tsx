@@ -122,6 +122,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Photo break: aerial rebar deck */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-band-aerial.jpg"
+          alt="DCC crew working on a structural rebar deck"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Three layers */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">
         <div className="section-reveal mb-12 flex items-baseline justify-between">
@@ -145,6 +155,16 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Photo break: multi-story steel structure at night */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-band-structure.jpg"
+          alt="Multi-story steel structure rising under construction lights at night"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
 
       {/* Rollout timeline */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-24">

@@ -97,6 +97,16 @@ export default function ThreeSixtyReviewPage() {
         </p>
       </section>
 
+      {/* Photo break: urban excavation */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-excavation-urban.jpg"
+          alt="Ground-level excavation in an urban setting"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Three-step model */}
       <section
         id="three-step"

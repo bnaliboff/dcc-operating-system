@@ -23,6 +23,16 @@ export default function ValuesIndexPage() {
         </p>
       </section>
 
+      {/* Photo break: NYC skyline */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-values-hero.jpg"
+          alt="Looking up at NYC skyscrapers against a vivid blue sky"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Pivotal vs Peripheral */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-16">
         <p className="eyebrow mb-8">Pivotal vs. Peripheral</p>

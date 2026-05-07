@@ -97,6 +97,16 @@ export default function RoadmapPage() {
         </p>
       </section>
 
+      {/* Photo break: aerial excavation */}
+      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+        <img
+          src="/images/photo-aerial-excavation.jpg"
+          alt="Aerial view of an active excavation site"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[var(--color-ink)] opacity-20" />
+      </div>
+
       {/* Rollout timeline */}
       <section className="container-page border-t border-t-[var(--color-rule)] py-16">
         <p className="eyebrow mb-10">Rollout Sequence</p>
