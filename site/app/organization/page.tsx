@@ -390,7 +390,7 @@ export default function OrganizationPage() {
         <p className="max-w-[58ch] text-[1.0625rem] leading-[1.6] mb-10">
           Every employee answers to two leaders. The Functional Leader owns the craft and the
           career. The Pod Co-Leaders own the daily work and the team. The split is intentional —
-          and the discipline is keeping each lane in its lane.
+          and the discipline is keeping each role in its lane.
         </p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
           <div className="bg-[var(--color-paper)] p-6 md:p-10">
