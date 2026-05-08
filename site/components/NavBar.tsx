@@ -17,13 +17,20 @@ export default function NavBar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-b-[var(--color-rule)] bg-[var(--color-paper)]">
-      <div className="container-page flex items-baseline justify-between py-5">
+      <div className="container-page flex items-center justify-between py-4">
         <Link
           href="/"
-          className="font-display text-[1.0625rem] tracking-tight"
+          className="flex items-center gap-2"
           aria-label="DCC Operating System — home"
         >
-          DCC <span className="text-[var(--color-mute)]">Operating System</span>
+          <img
+            src="/images/dcc-logo.png"
+            alt="Dickinson Cameron Construction"
+            className="h-11 w-auto [mix-blend-mode:multiply]"
+          />
+          <span className="font-display text-[0.875rem] tracking-tight text-[var(--color-mute)] whitespace-nowrap">
+            Operating System
+          </span>
         </Link>
         <nav aria-label="Primary">
           <ul className="flex items-baseline gap-x-7 text-[0.9375rem]">
