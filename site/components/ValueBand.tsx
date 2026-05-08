@@ -4,15 +4,15 @@ import type { Value } from '@/lib/values';
 export default function ValueBand({ value, index }: { value: Value; index: number }) {
   const num = String(index + 1).padStart(2, '0');
   return (
-    <article className="border-t border-t-[var(--color-rule)] py-16 first:border-t-0 first:pt-0">
-      <div className="grid grid-cols-12 gap-x-6">
+    <article className="border-t border-t-[var(--color-rule)] py-12 md:py-16 first:border-t-0 first:pt-0">
+      <div className="grid grid-cols-12 gap-x-6 gap-y-4 md:gap-y-0">
         <div className="col-span-12 md:col-span-2">
-          <span className="font-display text-[3rem] leading-none text-[var(--color-mute)]">
+          <span className="font-display text-[2rem] md:text-[3rem] leading-none text-[var(--color-mute)]">
             {num}
           </span>
         </div>
         <div className="col-span-12 md:col-span-10">
-          <h2 className="font-display text-[3rem] leading-[1.05] tracking-[-0.015em]">
+          <h2 className="font-display text-[2rem] md:text-[3rem] leading-[1.05] tracking-[-0.015em]">
             {value.name}
           </h2>
           <p className="mt-3 text-[1.25rem] leading-[1.4] text-[var(--color-mute)]">

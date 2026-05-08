@@ -29,7 +29,7 @@ export default async function ValueDetailPage({ params }: Props) {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <Link
           href="/values"
           className="eyebrow inline-block mb-4 text-[var(--color-mute)] hover:text-[var(--color-ink)] transition-colors"
@@ -77,11 +77,11 @@ export default async function ValueDetailPage({ params }: Props) {
       >
         <p className="eyebrow mb-10">What it looks like</p>
         <div className="grid grid-cols-1 gap-px bg-[var(--color-rule)] md:grid-cols-2">
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <p className="eyebrow mb-4">In the Field</p>
             <p className="text-[1.0625rem] leading-[1.6]">{value.inTheField}</p>
           </div>
-          <div className="bg-[var(--color-paper)] p-10">
+          <div className="bg-[var(--color-paper)] p-6 md:p-10">
             <p className="eyebrow mb-4">In the Office</p>
             <p className="text-[1.0625rem] leading-[1.6]">{value.inTheOffice}</p>
           </div>
