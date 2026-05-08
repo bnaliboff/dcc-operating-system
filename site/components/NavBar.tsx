@@ -11,6 +11,7 @@ const items = [
   { href: '/360-review', label: '360 Review' },
   { href: '/roadmap', label: 'Roadmap' },
   { href: '/glossary', label: 'Glossary' },
+  { href: '/scaling-calculator', label: 'Scale' },
 ];
 
 export default function NavBar() {
