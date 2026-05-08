@@ -85,7 +85,7 @@ export default function RoadmapPage() {
   return (
     <>
       {/* Page header */}
-      <section className="container-page pt-24 pb-16">
+      <section className="container-page pt-14 md:pt-24 pb-12 md:pb-16">
         <p className="eyebrow">Roadmap</p>
         <h1 className="mt-4 font-display text-[clamp(2.5rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.015em] text-balance max-w-[22ch]">
           Rollout sequence and action items.
@@ -98,7 +98,7 @@ export default function RoadmapPage() {
       </section>
 
       {/* Photo break: aerial excavation */}
-      <div className="relative w-full h-[260px] md:h-[340px] overflow-hidden">
+      <div className="relative w-full h-[200px] md:h-[280px] lg:h-[360px] overflow-hidden">
         <img
           src="/images/photo-aerial-excavation.jpg"
           alt="Aerial view of an active excavation site"
@@ -114,7 +114,7 @@ export default function RoadmapPage() {
           {milestones.map((m) => (
             <li
               key={m.title}
-              className={`grid grid-cols-12 gap-x-6 p-10 ${
+              className={`grid grid-cols-12 gap-x-6 gap-y-3 md:gap-y-0 p-6 md:p-10 ${
                 m.isCurrent ? 'bg-[var(--color-paper-2)]' : 'bg-[var(--color-paper)]'
               }`}
             >
@@ -156,7 +156,7 @@ export default function RoadmapPage() {
         <p className="eyebrow mb-10">Action Items</p>
         <div className="space-y-px bg-[var(--color-rule)]">
           {actionItems.map((ai) => (
-            <div key={ai.id} className="grid grid-cols-12 gap-x-6 bg-[var(--color-paper)] p-8">
+            <div key={ai.id} className="grid grid-cols-12 gap-x-6 gap-y-3 md:gap-y-0 bg-[var(--color-paper)] p-5 md:p-8">
               <div className="col-span-12 md:col-span-1">
                 <span className="font-mono text-[0.8125rem] text-[var(--color-mute)]">{ai.id}</span>
               </div>
