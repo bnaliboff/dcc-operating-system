@@ -163,6 +163,32 @@ export default function ScalingCalculator() {
               <div style={{ fontSize: '1.375rem', fontWeight: 500, fontVariantNumeric: 'lining-nums' }}>${'500M'} · {ceilingPods} pods</div>
             </div>
           </div>
+
+          {/* Reactive staff-count chips — update as pod count changes */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            {[
+              { label: 'Field Operations Managers', count: org.pods },
+              { label: 'Senior Project Managers',   count: org.pods },
+              { label: 'Field Staff',               count: org.pods * FIELD_PER_POD },
+              { label: 'Office Staff',              count: org.pods * OFFICE_PER_POD },
+            ].map(({ label, count }) => (
+              <div
+                key={label}
+                className="flex items-center gap-2 rounded-full px-3.5 py-1.5"
+                style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}
+              >
+                <span
+                  className="font-display"
+                  style={{ fontSize: '1rem', fontWeight: 500, fontVariantNumeric: 'lining-nums', color: 'var(--color-paper)', lineHeight: 1 }}
+                >
+                  {count}
+                </span>
+                <span style={{ fontSize: '0.75rem', color: 'rgba(244,239,231,0.55)', lineHeight: 1 }}>
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -348,8 +374,8 @@ export default function ScalingCalculator() {
                       {/* Staffing breakdown */}
                       <div className="eyebrow mb-1" style={{ fontSize: '0.625rem' }}>Leadership</div>
                       <div className="text-xs leading-relaxed text-[var(--color-ink)] mb-2">
-                        <div>Operations lead</div>
-                        <div>Project lead</div>
+                        <div>Field Operations Manager</div>
+                        <div>Senior Project Manager</div>
                       </div>
 
                       <div className="eyebrow mb-1" style={{ fontSize: '0.625rem' }}>Field ({FIELD_PER_POD})</div>
